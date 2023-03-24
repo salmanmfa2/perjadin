@@ -1,12 +1,12 @@
-//Components Import
-import Home from "./pages/Home";
-import RegisterPerjadin from "./containers/RegisterPerjadin";
-import NavigationBar from "./components/NavigationBar";
-//Dependencies
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-//Styling
 import 'bootstrap/dist/css/bootstrap.css';
+
+import Home from "./pages/Home";
+import RegisterPerjadin from "./containers/RegisterPerjadin";
+import NavigationBar from "./containers/NavigationBar";
+import Footer from "./containers/Footer.jsx";
+
 
 const App = () => {
     return (
@@ -17,9 +17,11 @@ const App = () => {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/register" element={<RegisterPerjadin/>}/>
                 </Routes>
+                <Footer/>
+                
             </Router>
-            <Home/>
         </div>
     )
 }
+
 export default App;

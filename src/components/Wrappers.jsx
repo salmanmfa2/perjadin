@@ -1,22 +1,21 @@
 import React from 'react';
 import {Card , Button, Dropdown, Badge} from 'react-bootstrap';
 import CardHeader from 'react-bootstrap/esm/CardHeader';
+import './wrapper.css';
+
 
 const Wrappers = (props) => {
+
     
-    const getAkun = () => {
-
-    }
-
   return (
     <div>
-        <Card bg="dark" style={{width:'20em',margin:"10px", color:'white'}}>
+        <Card className='card-wrappers' bg="dark" >
             <Card.Header>
-                Ketersediaan Pagu
+                {props.title}
             </Card.Header> 
             <Card.Body>
-                <Card.Title>Akun</Card.Title>
-                <h2>{props.pagu}</h2>
+                <Card.Subtitle>{props.subtitle}</Card.Subtitle>
+                <h2>{props.value}</h2>
             </Card.Body>
         
 

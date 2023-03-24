@@ -1,0 +1,14 @@
+.card-wrappers{
+    
+    color:white;
+    width: 575px;
+    align-items: left;
+    text-align: center;
+    height: auto;
+    gap: 121 px;
+    margin: 10px;
+    box-shadow: 0 0 0 8px rgba(0,0,0,0,2);
+}
+h2{
+    color: #BBCD67;
+}

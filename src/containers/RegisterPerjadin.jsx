@@ -17,26 +17,26 @@ const RegisterPerjadin = () => {
 
       <Form.Group className='mb-3' controlId='formBasicdad'>
         <Form.Label>Akun</Form.Label>
-        <Form.Control type='pilih tanggal' placeholder=''></Form.Control>
+        <Form.Control type='akun' placeholder='BA'></Form.Control>
       </Form.Group>
+      <Form.Group>
+      <Form.Label>Anggaran</Form.Label>
+      <Form.Control type='anggaran' placeholder='Rp.XXXXX..... '></Form.Control>
+
+    </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Tanggal</Form.Label>
         <Form.Control type="dates" placeholder="Tanggal" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+      <Form.Group>
+        <Form.Check type="checkbox" label="Ajukan Permintaan UM?"></Form.Check>
       </Form.Group>
       <Button variant="dark" type="submit">
         Submit
       </Button>
     </Form>
-
-    <Form.Group>
-      <Form.Label></Form.Label>
-      <Form.Control></Form.Control>
-
-    </Form.Group>
+    
       
     </div>
   )
