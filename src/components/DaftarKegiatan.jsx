@@ -2,10 +2,11 @@ import React from 'react';
 import {Table} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 
-const DaftarKegiatan = () => {
+const DaftarKegiatan = (props) => {
   return (
     <div>
-        <Table striped="columns" style={{margin:'5px', width:'1500px'}}>
+        
+        <Table size="sm" striped="columns" style={{margin:'5px', width:'1500px' }}>
       <thead>
         <tr>
           <th>#</th>
@@ -29,30 +30,26 @@ const DaftarKegiatan = () => {
           <td>10-04-2023</td>
           <td>15-04-2023</td>
           <td>Rp. 2.540.000</td>
-          <td>524212</td>
+          <td>524111</td>
           <td style={{display:'flex' , flexDirection:'row', gap:'5px'}}>
             <Button variant='dark'>Cancel</Button>
           </td>
           <td>Sudah Diverifikasi</td>
         </tr>
+        {props.handleList?.map((keg)=>(
         <tr>
-          <td>2</td>
-          <td>Monitoring BLU</td>
-          <td>Raha</td>
-          <td><b>Saya</b>,Teri, Beni</td>
-          <td>13-04-2023</td>
-          <td>15-04-2023</td>
-          <td>Rp. 1.050.000</td>
-          <td>524212</td>
-          <td style={{display:'flex' , flexDirection:'row', gap:'5px'}}>
-            <Button variant='dark'>Cancel</Button>
-            <Button variant='dark'>Edit</Button>
-          </td>
-          <td>Belum Diverifikasi</td>
+          <td>{keg.id}</td>
+          <td>{keg.namaKegiatan}</td>
+          <td>{keg.lokasiKegiatan}</td>
+          <td>{keg.anggotaTim}</td>
+          <td>{keg.tanggalMulai}</td>
+          <td>{keg.tanggalSelesai}</td>
+          <td>{keg.jumlahAnggaran}</td>
+          <td>{keg.akun}</td>
+        </tr>
+        ))};
         
-        </tr>
-        <tr>
-        </tr>
+        
       </tbody>
     </Table>
     </div>

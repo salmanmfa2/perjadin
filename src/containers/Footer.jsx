@@ -7,8 +7,7 @@ function Footer() {
     <Navbar fixed="bottom" sticky="bottom" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#">Perjadin</Navbar.Brand>
-        <Navbar.Text className="ml-auto">
-          © {new Date().getFullYear()} My Website
+        <Navbar.Text className="ml-auto"> 
         </Navbar.Text>
         <BadgeTanggal/>
       </Container>

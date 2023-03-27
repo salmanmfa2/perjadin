@@ -1,40 +1,32 @@
 import React, { useState } from 'react';
-import { Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import RegisterPerjadin from '../containers/RegisterPerjadin';
 
-function Login() {
+function Example() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Register Perjadin
       </Button>
 
-      <Modal show={show} onHide={handleClose} animation={false}>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Ajukan Kegiatan Perjadin</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
-            <Form.Body>
-              <FormGroup>
-                <FormLabel>Username</FormLabel>
-                <FormControl type="username" placeholder='Enter username...'></FormControl>
-              </FormGroup>
-            </Form.Body>
-          </Form>
+          <RegisterPerjadin />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Cancel
           </Button>
         </Modal.Footer>
       </Modal>
@@ -42,4 +34,5 @@ function Login() {
   );
 }
 
-export default Login;
+// render(<Example />);
+export default Example;

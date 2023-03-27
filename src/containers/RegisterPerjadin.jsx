@@ -1,13 +1,15 @@
 import React from 'react';
 import {Form , Button, Container, Dropdown} from 'react-bootstrap';
+import { useState } from 'react';
 
 
-const RegisterPerjadin = () => {
+const RegisterPerjadin = (props) => {
+  const [inputData, setInputData] = useState('')
   return (
-    <div style={{marginTop:"2 em"}}>
+    <div style={{marginTop:"2 em", width:'300px'}}>
      
-      <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form onSubmit={props.submitHandler}>
+      <Form.Group className="mb-3" controlId="formBasicdad">
         <Form.Label>Nama Kegiatan</Form.Label>
         <Form.Control type="email" placeholder="Kegiatan Perjadin" />
         <Form.Text className="text-muted">
